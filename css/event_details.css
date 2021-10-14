@@ -1,0 +1,74 @@
+.buy-ticket_link {
+    display: block;
+    margin-top: 35px;
+    width: 230px;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(158, 46, 93);
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.buy-ticket_link:hover {
+    cursor: pointer;
+    background-color: rgb(158, 46, 93);
+    color: white;
+    text-decoration: none;
+}
+
+.edit-ticket_link {
+    display: inline-block;
+    margin-top: 15px;
+    width: 10%;
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.delete-ticket_link {
+    margin-right: 15px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 10%;
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.edit-ticket_link:hover {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+}
+
+.delete-ticket_link:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+}
+
+#event_details_image {
+    object-fit: cover;
+    width: 600px;
+    height: 400px;
+}
+
+#ed_info span {
+    font-weight: bold;
+}

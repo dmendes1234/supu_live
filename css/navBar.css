@@ -1,0 +1,110 @@
+.navigation {
+    overflow: hidden;
+    background-color: #333;
+    margin-left: 80px;
+    margin-right: 80px;
+    max-height: 53px;
+}
+
+.navigation a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown1 {
+    float: right;
+    overflow: hidden;
+    min-width: 160px;
+}
+
+.dropdown1 .dropbtn1 {
+    min-width: 160px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navigation a:hover, .dropdown1:hover .dropbtn1 {
+    background-color: rgb(158, 46, 93);
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content1 a:hover {
+    background-color: #ddd;
+}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+/*tražilica*/
+
+.search-container {
+    float: right;
+    margin-top: 8px;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px;
+    margin-right: 16px;
+    background: rgb(158, 46, 93);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.search-container button:hover {
+    background: #ccc;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .search-container {
+        float: none;
+    }
+    .search-container input[type=text], .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .search-container input[type=text] {
+        border: 1px solid #ccc;
+    }
+}

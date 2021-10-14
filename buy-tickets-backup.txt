@@ -1,0 +1,38 @@
+$get_users = mysqli_query($con, "SELECT * FROM users WHERE ID = '$user_id'");
+$row_user = mysqli_fetch_array($get_users);
+
+$get_events = mysqli_query($con, "SELECT * FROM events WHERE ID = '$event_id'");
+$row_event = mysqli_fetch_array($get_events);
+
+if (isset($_POST['buy'])) {
+    $event_title = $row_event['Title'];
+    $logged_user = $row_user['UserName'];
+    $noadult = $_POST['noadult'];
+    $nochildren = $_POST['nochildren'];
+    $updated_seats = $row_event['AvailableSeats'] - ($noadult + $nochildren);
+    $cprice = $_POST['cprice'];
+    $aprice = $_POST['aprice'];
+    $buyer_name = $_POST['buyer_name'];
+    $buyer_surname = $_POST['buyer_surname'];
+    $buyer_address = $_POST['buyer_address'];
+    $ticketid = mt_rand(100000000, 999999999);
+    $promo_code = $_POST['promo_code'];
+
+    if ($row_event['PromoCode'] == $promo_code){
+        $promo_discount = $row_event['PromoDiscount'];
+    }
+    else{
+        $promo_discount = 0;
+    }
+
+    if($updated_seats >= 0){
+        if(isset($_POST['confirm'])){
+            $query = mysqli_query($con, "INSERT INTO tickets (TicketID, NoChildren, NoAdult, ChildUnitPrice, AdultUnitPrice, User, BuyerName, BuyerSurname, BuyerAddress, EventTitle, PromoDiscount) VALUE ('$ticketid', '$nochildren', '$noadult', '$cprice', '$aprice', '$logged_user', '$buyer_name', '$buyer_surname', '$buyer_address', '$event_title', '$promo_discount')");
+            $update_availableSeats = mysqli_query($con, "UPDATE events SET AvailableSeats = '$updated_seats' WHERE ID = '$event_id'");
+            if ($query){
+                '<script>alert("Ulaznice će vam biti dostavljene na adresu")</script>';
+            }
+        }
+    } else { '<script>alert("Broj ulaznica koje želite kupiti premašuje broj slobodnih mjesta!")</script>'; }
+
+ }

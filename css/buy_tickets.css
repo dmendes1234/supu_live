@@ -1,0 +1,135 @@
+#buy-ticket_container {
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: white;
+}
+
+
+/* Style tab links */
+
+.tablink {
+    background-color: #333;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.33%;
+}
+
+.tablink:hover {
+    cursor: default;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+
+/*
+button:disabled:hover {
+    cursor: default;
+}
+
+button:disabled {
+    opacity: 0.7;
+}
+*/
+
+.tablink_next {
+    background-color: #333;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 10%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tablink_back {
+    background-color: #333;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 10%;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.tablink_buy {
+    background-color: #333;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.tablink_next:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(158, 46, 93);
+}
+
+.tablink_back:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(158, 46, 93);
+}
+
+.tablink_buy:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(158, 46, 93);
+}
+
+.tabcontent {
+    margin: 50px;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    background-color: white;
+}
+
+
+/*validation box*/
+
+#alertBox {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
